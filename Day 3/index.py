@@ -1,24 +1,25 @@
-#Guess Game
+import time
 import random
-import math
 
-guess = math.floor((random.random()*10)+1)
+guess  =  random.randint(1, 10)
 
-a = input("Enter the number to guess between 1 to 10: ")
-num_to_guess = a.isdigit()
-num_to_guess = int(num_to_guess)
-if(num_to_guess == True):
-    if(num_to_guess == guess):
-        print("Congratulations You made the right guess!!!")
-    elif(num_to_guess != guess):
-        print("Sorry you didn't make the write guess try again")
-    else:
-        print("Please enter a number between 1 to 10")
+counter = 1 
+
+while counter <= 4:
+    num_to_guess = input("Enter the number to guess: ")
+    
+    if not num_to_guess.isnumeric():
+        print("Enter a numeric string")
+        continue
+    num_to_guess = int(num_to_guess)
+    if num_to_guess < 1 or num_to_guess > 10:
+        print("enter numbers between 1 and 10")
+        continue
+    if num_to_guess == guess:
+        print("congratulations!!")
         
-else: 
-    print("/n/n/nEnter a whole number")
-
-
-
+    else:
+        print(f"Sorry you failed and you are left with {4-counter} ")
+        counter += 1
 
 
