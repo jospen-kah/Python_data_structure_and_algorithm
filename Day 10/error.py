@@ -38,20 +38,23 @@ def mul(x,y):
     else:
         print("result is", result)
     finally:
-        print("executing finally clause")  
+        print("executing finally clause")
+    print("Do you want to exit or continue: ")
+      
 
-num1 = input("Enter first number: ")
-num2= input("Input Second number: ")
 
 while True:
-    if num1.isnumeric() and num2.isnum():
+    
+    num1 = input("Enter first number: ")
+    num2 = input("Input Second number: ")
+    if num1.isnumeric() and num2.isnumeric():
         num1 = int(num1)
         num2 = int(num2)
     else: 
-        print("Please enter an Interger")
+        print("Please enter an Interger: ")
         continue
-    print("Which operation do you want to carryout: \n 1-Addition \n 2-Subtraction \n 3-Multiplication \n 4-Divisiov \n 5-Exit")
-    choice = input("Enter your choice from 1 to 4")
+    print("Which operation do you want to carryout: \n 1-Addition \n 2-Subtraction \n 3-Multiplication \n 4-Division \n 5-Exit")
+    choice = input("Enter your choice from 1 to 4: ")
     if choice == "1":
         add(num1, num2)
     if choice == "2":
@@ -68,4 +71,8 @@ while True:
             break
          else:
             continue
-    
+    exit = input("Are you sure you want to exit the program 'yes' or 'no' : ")
+    if exit == "yes":
+            break
+    else:
+            continue
