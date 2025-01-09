@@ -24,8 +24,8 @@ print(arr)
 position1 = int(input("enter the first position to swap: "))
 position2 = int(input("enter the second position to swap: "))
 
-while position1 >= 0 and position1 <= size and position2 >= 0 and position2 <= size :
-    temp = arr[position1+1]
-    arr[position1+1] = arr[position2+1]
-    arr[position2+1] = temp
+if position1 >= 0 and position1 <= size and position2 >= 0 and position2 <= size :
+    temp = arr[position1]
+    arr[position1] = arr[position2]
+    arr[position2] = temp
 print(arr)
